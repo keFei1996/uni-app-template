@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import App from './App'
-import Mock from './mocks/index'
+// import Mock from './mocks/index'
 
 Vue.config.productionTip = false
 
