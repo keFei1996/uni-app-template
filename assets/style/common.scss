@@ -1,0 +1,217 @@
+@import '@/style/mixin.scss';
+view,
+page,
+text,
+button,
+image,
+textarea,
+scroll-view,input {
+	box-sizing: border-box;
+}
+page {
+	font-size: 26rpx;
+	color: #333;
+	background-color: #F5F5F5;
+	box-sizing: border-box;
+}
+image {
+	display: block;
+}
+button {
+	margin: 0;
+	padding: 0;
+	background-color: #FFFF;
+}
+button::after {
+	border: none;
+}
+//margin && padding
+$sites:(
+				t: top,
+				r: right,
+				b: bottom,
+				l: left
+);
+
+$sizes:(
+				0: 0,
+				10: 10rpx,
+				20: 20rpx,
+				30: 30rpx,
+				40: 40rpx,
+				50: 50rpx,
+				60: 60rpx
+);
+@each $prop,
+$abbrev in ( m: margin,
+				p: padding) {
+	@each $name,
+	$value in $sites {
+		@each $size,
+		$length in $sizes {
+			.#{$prop}-#{$name}-#{$size} {
+				#{$abbrev}-#{$value}: $length;
+			}
+		}
+	}
+}
+.m-0{
+	margin: 0 !important;
+}
+.p-0{
+	padding: 0 !important;
+}
+.font-24{
+	font-size: 24rpx;
+}
+.font-26{
+	font-size: 26rpx;
+}
+.font-28{
+	font-size: 28rpx;
+}
+.font-30{
+	font-size: 30rpx;
+}
+
+
+.relative{
+	position: relative;
+}
+/*
+高度宽度
+ */
+.h100{
+	height: 100%;
+}
+.w100{
+	width: 100%;
+}
+.wh100{
+	width: 100%;
+	height: 100%;
+}
+.h100vh{
+	height: 100vh;
+}
+// 主题背景色
+.text-center{
+	text-align: center;
+}
+.text-left{
+	text-align: left;
+}
+.text-right{
+	text-align: right;
+}
+.font-bold{
+	font-weight: bold;
+}
+.main-color {
+	color: $themeColor;
+}
+.color-333{
+	color: #333333;
+}
+.color-666{
+	color: #666666;
+}
+.color-999{
+	color: #999999;
+}
+.tip-color {
+	color: #999;
+}
+.error-color{
+	color: #FF5660;
+}
+// 公共分割线
+.z-line-pub{
+	width: 100%;
+	height:1px;
+	background: #EAEAEA;
+}
+/*
+ 弹性布局
+ */
+.row{
+	display: flex;
+}
+.col{
+	display: flex;
+	flex-direction: column;
+}
+.flex1{
+	flex: 1;
+}
+.row-center{
+	justify-content: center;
+}
+.col-center{
+	align-items: center;
+}
+.flex2{
+	flex: 2;
+}
+/*
+选择照片
+ */
+.chooseImg-box{
+	//padding: 24px 32px;
+	background: #fff;
+	.imgs{
+		display: flex;
+		flex-wrap: wrap;
+		margin-right: -14rpx;
+		.img-item{
+			width: 122rpx;
+			height: 122rpx;
+			margin-top: 12rpx;
+			position: relative;
+			margin-bottom: 16rpx;
+			.load-img{
+				width: 100%;
+				height: 100%;
+			}
+		}
+		.add-img{
+			width: 122rpx;
+			height: 122rpx;
+		}
+	}
+	.del-img{
+		position: absolute;
+		right: 0;
+		top: 0;
+		transform: translate(50%, -50%);
+		width: 32rpx;
+		height: 32rpx;
+	}
+}
+/*
+省略号
+ */
+// 单行省略号
+.one-line-ellipsis{
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+// 第二行省略
+.second-line-ellipsis{
+	display: -webkit-box;
+	/* autoprefixer: ignore next */
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 2; //行数
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+// 第三行省略
+.three-line-ellipsis{
+	display: -webkit-box;
+	/* autoprefixer: ignore next */
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 3; //行数
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
