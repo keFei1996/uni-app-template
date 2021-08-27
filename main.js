@@ -7,7 +7,9 @@ import store from './store'
 import dayjs from "dayjs"
 import 'dayjs/locale/zh-cn' // 导入本地化语言
 dayjs.locale('zh-cn') // 使用本地化语言
-Vue.prototype.$dayjs = dayjs;//赋值使用
+Vue.prototype.$dayjs = dayjs;// 赋值使用
+
+App.mpType = 'app'
 
 
 const app = new Vue({

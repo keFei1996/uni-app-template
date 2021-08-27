@@ -8,7 +8,6 @@
 </template>
 
 <script>
-	import { test } from "../../apis/user";
 
 	export default {
 		data() {
@@ -17,14 +16,9 @@
 			}
 		},
 		onLoad() {
-			this.testUse();
+
 		},
 		methods: {
-			testUse() {
-				test().then(res => {
-					console.log(res)
-				})
-			}
 		}
 	}
 </script>

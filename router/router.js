@@ -7,7 +7,7 @@ const router = createRouter({
 });
 
 const whiteList = [
-  '/pages/login/login/login',
+  '/pages/login/login',
 ]
 //全局路由前置守卫
 router.beforeEach(async(to, from, next) => {
