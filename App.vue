@@ -14,6 +14,6 @@
 
 <style lang="scss">
   /*每个页面公共css */
-  @import './style/common.scss';
-  @import "./style/project.scss";
+  @import './assets/style/common.scss';
+  @import "./assets/style/project.scss";
 </style>
