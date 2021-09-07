@@ -3,6 +3,8 @@ import App from './App'
 import {router, RouterMount} from './router/router.js'  //路径换成自己的
 Vue.use(router)
 import store from './store'
+import fun from './utils/fun'
+Vue.use(fun)
 
 import dayjs from "dayjs"
 import 'dayjs/locale/zh-cn' // 导入本地化语言

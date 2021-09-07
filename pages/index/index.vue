@@ -4,6 +4,7 @@
 		<view class="text-area">
 			<text class="title">{{title}}</text>
 		</view>
+    <button class="m-t-40" @click="toGo">跳转到公众号</button>
 	</view>
 </template>
 
@@ -15,10 +16,13 @@
 				title: 'Hello'
 			}
 		},
-		onLoad() {
-
+		onLoad(options) {
+      console.log('options', options)
 		},
 		methods: {
+      toGo() {
+        this.$toRouter('/pages/test/test')
+      }
 		}
 	}
 </script>
